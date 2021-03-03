@@ -1,4 +1,5 @@
-import { FC } from 'react'
+import { ChangeEvent, FC } from 'react'
+import { changeInputQuery } from '../../models/search'
 import { Card, Input } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 
@@ -17,6 +18,9 @@ export const Search: FC = () => {
           style={{ borderRadius: '2rem' }}
           prefix={<SearchOutlined />}
           size='large'
+          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+            changeInputQuery(event.target.value)
+          }
         />
       </Card>
     </>

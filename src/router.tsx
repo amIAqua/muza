@@ -8,7 +8,7 @@ export const Router: FC = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path={'/'} component={MainPage} exact />
+        <Route path={'/'} component={MainPage} />
       </Switch>
     </BrowserRouter>
   )
