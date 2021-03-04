@@ -18,3 +18,8 @@ body {
 .dashboard {
   margin-top: 50px;
 }
+
+.section-title {
+  color: #fff;
+  font-weight: 700;
+}

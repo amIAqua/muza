@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Col, Row } from 'antd'
 import { SearchSection } from '../components/SearchSection/SearchSection'
-import { PlayerSection } from '../components/PlayerSection/PlayerSection'
+import { ContentSection } from '../components/ContentSection/ContentSection'
 
 export const MainPage: FC = () => {
   return (
@@ -12,7 +12,7 @@ export const MainPage: FC = () => {
             <SearchSection />
           </Col>
           <Col sm={14}>
-            <PlayerSection />
+            <ContentSection />
           </Col>
         </Row>
       </div>
