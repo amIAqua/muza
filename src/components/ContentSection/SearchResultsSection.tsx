@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 // Content sections
-import { Tracks } from './Tracks'
+import { Tracks } from '../UI/Tracks/Tracks'
 import { Artists } from './Artists'
 import { Albums } from './Albums'
 import { Playlists } from './Playlists'

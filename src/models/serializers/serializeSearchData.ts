@@ -1,3 +1,5 @@
+import { trackDurationTransform } from '../../utils/trackDurationTransform'
+
 export function serializeData(searchResults: any): any {
   return {
     tracks: searchResults.tracks.items.map((item: any) => {
@@ -6,6 +8,8 @@ export function serializeData(searchResults: any): any {
         name: item.name,
         album: item.album.name,
         artist: item.artists.map((artist: any) => artist.name),
+        image: item.album.images[2].url,
+        duration: trackDurationTransform(item.duration_ms),
       }
     }),
     albums: searchResults.albums.items.map((item: any) => {

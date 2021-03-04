@@ -16,6 +16,7 @@ export const ContentSection: FC = () => {
           width: '100%',
           background: '#535353',
           border: '#535353',
+          marginLeft: '1rem',
         }}
       >
         {showResultsSection()}

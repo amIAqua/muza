@@ -15,6 +15,8 @@ const getDataBySearchQuery = createEffect(async (query: string) => {
   // Serialize data to appropriate format
   const outputData = serializeData(searchResults)
 
+  console.log(outputData)
+
   return outputData
 })
 
@@ -29,9 +31,10 @@ const $inputQuery = createStore<string>('').on(
   }
 )
 
-const $searchResults = createStore<ISeachResults | []>(
-  []
-).on(getDataBySearchQuery.doneData, (state, results) => console.log(results))
+const $searchResults = createStore<any>({}).on(
+  getDataBySearchQuery.doneData,
+  (state, results) => results
+)
 
 // Return one combined store
 export const searchStore = combine({
