@@ -1,17 +1,33 @@
-interface IAlbum {
+export interface ITrack {
+  id: string
   name: string
+  image: string
+  duration: string
+  album: string
   artist: string
 }
 
-interface ITracks {}
+export interface IArtist {
+  id: string
+  name: string
+  image: string
+}
 
-interface IArtists {}
+export interface IAlbum {
+  id: string
+  name: string
+  image: string
+}
 
-interface IPlayLists {}
+export interface IPlayList {
+  id: string
+  name: string
+  image: string
+}
 
 export interface ISeachResults {
   albums: IAlbum[]
-  tracks: ITracks[]
-  artists: IArtists[]
-  playlists: IPlayLists[]
+  tracks: ITrack[]
+  artists: IArtist[]
+  playlists: IPlayList[]
 }

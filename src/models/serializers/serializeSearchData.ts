@@ -1,6 +1,7 @@
 import { trackDurationTransform } from '../../utils/trackDurationTransform'
+import { ISeachResults, ITrack } from '../types/search-results.types'
 
-export function serializeData(searchResults: any): any {
+export function serializeData(searchResults: any): ISeachResults {
   return {
     tracks: searchResults.tracks.items.map((item: any) => {
       return {

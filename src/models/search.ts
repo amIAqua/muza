@@ -10,12 +10,8 @@ export const changeInputQuery = createEvent<string>()
 const getDataBySearchQuery = createEffect(async (query: string) => {
   const searchResults = await searchAllByQuery(query)
 
-  console.log(searchResults)
-
   // Serialize data to appropriate format
-  const outputData = serializeData(searchResults)
-
-  console.log(outputData)
+  const outputData: ISeachResults = serializeData(searchResults)
 
   return outputData
 })
@@ -33,7 +29,7 @@ const $inputQuery = createStore<string>('').on(
 
 const $searchResults = createStore<any>({}).on(
   getDataBySearchQuery.doneData,
-  (state, results) => results
+  (state, results: ISeachResults) => results
 )
 
 // Return one combined store

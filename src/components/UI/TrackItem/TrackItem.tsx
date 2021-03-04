@@ -1,8 +1,9 @@
 import { FC } from 'react'
+import { ITrack } from '../../../models/types/search-results.types'
 import classes from './TrackItem.module.css'
 
 type TrackItemProps = {
-  track: any
+  track: ITrack
   index: number
 }
 
