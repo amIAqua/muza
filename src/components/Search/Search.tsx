@@ -13,6 +13,7 @@ export const Search: FC = () => {
           border: '#535353',
         }}
       >
+        <h2 style={{ color: '#fff', fontWeight: 'bold' }}>Search</h2>
         <Input
           placeholder='Find tracks, albums, podcasts'
           style={{ borderRadius: '2rem' }}

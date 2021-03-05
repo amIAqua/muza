@@ -1,0 +1,10 @@
+.navItem {
+  color: #ccc;
+  font-weight: 700;
+  margin-right: 2rem;
+}
+
+.navItem:hover {
+  color: #fff;
+  cursor: pointer;
+}

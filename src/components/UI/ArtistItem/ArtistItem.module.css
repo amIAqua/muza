@@ -1,0 +1,28 @@
+.artistItem {
+  width: 200px;
+
+  display: flex;
+  /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(74, 74, 74);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.artistItem:hover {
+  background: rgb(61, 61, 61);
+  cursor: pointer;
+}
+
+.artistName {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.artistFollowers {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}

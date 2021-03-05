@@ -21,9 +21,11 @@ const $inputQuery = createStore<string>('').on(
   changeInputQuery,
   (state, query) => {
     if (!query) {
-      return
+      return query
     }
+
     getDataBySearchQuery(query)
+    return query
   }
 )
 

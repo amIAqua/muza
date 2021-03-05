@@ -18,8 +18,6 @@ export const Tracks: FC = () => {
 
   return (
     <>
-      <h2 className='section-title'>Tracks</h2>
-
       <div className={classes.tracksList}>{showTracks()}</div>
     </>
   )

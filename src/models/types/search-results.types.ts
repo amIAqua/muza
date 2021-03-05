@@ -11,6 +11,7 @@ export interface IArtist {
   id: string
   name: string
   image: string
+  followers: number
 }
 
 export interface IAlbum {
