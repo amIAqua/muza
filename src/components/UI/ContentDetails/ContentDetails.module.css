@@ -1,0 +1,47 @@
+.contentName {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.contentType {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-right: 0.5rem;
+  font-size: 20px;
+}
+
+.headSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detailImageContainer {
+  margin-top: 1rem;
+  background: rgb(74, 74, 74);
+}
+
+.detailImage {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.bottomButtons {
+  margin-top: 2rem;
+}
+
+.button {
+  margin-right: 1rem;
+}
+
+.button:hover {
+  background: rgb(13, 145, 44) !important;
+}
+
+.button span {
+  padding-bottom: 5px;
+}

@@ -17,11 +17,13 @@ export const authAPI = {
     try {
       const response = await authInstance('/api/token', {
         method: 'POST',
+        params: {},
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           Authorization: `Basic ${getBase64ClientCredentials()}`,
         },
-        data: 'grant_type=client_credentials',
+        data:
+          'grant_type=client_credentials&scope=streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state',
       })
 
       setTokenToLocalStorage(response.data.access_token)

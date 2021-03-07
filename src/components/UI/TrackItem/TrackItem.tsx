@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { ITrack } from '../../../models/types/search-results.types'
+import { setContentDetails } from '../../../models/details'
 import classes from './TrackItem.module.css'
 
 type TrackItemProps = {
@@ -10,7 +11,10 @@ type TrackItemProps = {
 export const TrackItem: FC<TrackItemProps> = ({ track, index }) => {
   return (
     <>
-      <div className={classes.trackItem}>
+      <div
+        className={classes.trackItem}
+        onClick={() => setContentDetails(track)}
+      >
         <h3 className={classes.index}>{index}</h3>
         <img
           src={track.image}

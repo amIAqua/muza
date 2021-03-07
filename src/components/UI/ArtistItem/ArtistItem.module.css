@@ -1,8 +1,6 @@
 .artistItem {
   width: 200px;
-
   display: flex;
-  /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); */
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;

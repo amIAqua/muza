@@ -2,16 +2,23 @@ export interface ITrack {
   id: string
   name: string
   image: string
+  detail_image: string
   duration: string
   album: string
+  open_on_spotify_url: string
   artist: string
+  uri: string
+  type: string
 }
 
 export interface IArtist {
   id: string
   name: string
   image: string
+  detail_image: string
+  open_on_spotify_url: string
   followers: number
+  type: string
 }
 
 export interface IAlbum {

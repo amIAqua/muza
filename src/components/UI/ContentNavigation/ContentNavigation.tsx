@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction, useEffect } from 'react'
+import { Dispatch, FC, SetStateAction } from 'react'
 import classes from './ContentNavigation.module.css'
 
 type NavProps = {

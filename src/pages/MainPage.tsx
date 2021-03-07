@@ -1,7 +1,8 @@
 import { FC } from 'react'
 import { Col, Row } from 'antd'
-import { SearchSection } from '../components/SearchSection/SearchSection'
 import { ContentSection } from '../components/ContentSection/ContentSection'
+import { Search } from '../components/Search/Search'
+import { ContentDetails } from '../components/UI/ContentDetails/ContentDetails'
 
 export const MainPage: FC = () => {
   return (
@@ -9,7 +10,8 @@ export const MainPage: FC = () => {
       <div className='dashboard'>
         <Row>
           <Col sm={10}>
-            <SearchSection />
+            <Search />
+            <ContentDetails />
           </Col>
           <Col sm={14}>
             <ContentSection />

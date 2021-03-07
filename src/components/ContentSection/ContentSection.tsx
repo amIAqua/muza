@@ -1,16 +1,14 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { Card } from 'antd'
+import { searchStore } from '../../models/search'
 import { SearchResultsSection } from './SearchResultsSection'
+import { useStore } from 'effector-react'
 
 export const ContentSection: FC = () => {
-  const [showSec, setShowSec] = useState(true)
+  const { inputQuery } = useStore(searchStore)
 
   const showResultsSection = () => {
-    return showSec ? <SearchResultsSection /> : null
-  }
-
-  return (
-    <>
+    return inputQuery ? (
       <Card
         style={{
           width: '100%',
@@ -19,8 +17,10 @@ export const ContentSection: FC = () => {
           marginLeft: '1rem',
         }}
       >
-        {showResultsSection()}
+        <SearchResultsSection />
       </Card>
-    </>
-  )
+    ) : null
+  }
+
+  return <>{showResultsSection()}</>
 }
