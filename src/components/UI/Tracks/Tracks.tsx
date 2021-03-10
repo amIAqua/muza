@@ -17,18 +17,22 @@ export const Tracks: FC = () => {
       : null
   }
 
+  const loadMoreTracks = () => (
+    <p
+      className='more'
+      onClick={() =>
+        getTracks({ query: inputQuery, offset: fetchedTracks.length + 1 })
+      }
+    >
+      more
+    </p>
+  )
+
   return (
     <>
       <div className={classes.tracksList}>
         {showTracks()}
-        <p
-          className='more'
-          onClick={() =>
-            getTracks({ query: inputQuery, offset: fetchedTracks.length })
-          }
-        >
-          more
-        </p>
+        {loadMoreTracks()}
       </div>
     </>
   )

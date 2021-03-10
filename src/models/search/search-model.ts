@@ -12,6 +12,12 @@ export const $inputQuery = createStore<string>('').on(
       clearSearchResults()
       return query
     }
+
+    // Checking with RegExp. If query ends with space
+    if (/\s$/.test(query)) {
+      return query
+    }
+
     clearSearchResults()
 
     getTracks({ query, offset: 0 })

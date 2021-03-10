@@ -21,18 +21,23 @@ export const Artists: FC = () => {
         })
       : null
   }
+
+  const loadMoreArtists = () => (
+    <p
+      className='more'
+      onClick={() =>
+        getArtists({ query: inputQuery, offset: fetchedArtists.length + 1 })
+      }
+    >
+      more
+    </p>
+  )
+
   return (
     <>
       <div className={classes.artistsList}>
         <Row gutter={16}>{showArtists()}</Row>
-        <p
-          className='more'
-          onClick={() =>
-            getArtists({ query: inputQuery, offset: fetchedArtists.length })
-          }
-        >
-          more
-        </p>
+        {loadMoreArtists()}
       </div>
     </>
   )

@@ -6,8 +6,8 @@ import { getArtists } from './artists-effects'
 export const $fetchedArtists = createStore<any>([])
   .on(getArtists.doneData, (state, artists: IArtist[]) => {
     // Add new artists to existing
-    if (state.length) return [...state, ...artists]
+    // if (state.length) return [...state, ...artists]
 
-    return [...artists]
+    return [...state, ...artists]
   })
-  .on(clearSearchResults, (state: ISeachResults | null) => [])
+  .on(clearSearchResults, (state: IArtist[] | null) => [])

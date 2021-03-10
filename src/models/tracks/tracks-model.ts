@@ -6,8 +6,8 @@ import { getTracks } from './tracks-effects'
 export const $fetchedTracks = createStore<any>([])
   .on(getTracks.doneData, (state, tracks: ITrack[]) => {
     // Add new tracks to existing
-    if (state.length) return [...state, ...tracks]
+    // if (state.length) return [...state, ...tracks]
 
-    return [...tracks]
+    return [...state, ...tracks]
   })
   .on(clearSearchResults, (state: ISeachResults | null) => [])
