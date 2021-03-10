@@ -1,5 +1,5 @@
 import { ChangeEvent, FC } from 'react'
-import { changeInputQuery } from '../../models/search'
+import { changeInputQuery } from '../../models/search/search-events'
 import { Card, Input } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 

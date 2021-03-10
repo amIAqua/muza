@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Card } from 'antd'
-import { searchStore } from '../../models/search'
+import { searchStore } from '../../models/combinedStore'
 import { SearchResultsSection } from './SearchResultsSection'
 import { useStore } from 'effector-react'
 

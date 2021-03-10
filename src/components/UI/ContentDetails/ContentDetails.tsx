@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import { useStore } from 'effector-react'
 import { detailsStore, clearContentDetails } from '../../../models/details'
-import { searchStore } from '../../../models/search'
+import { searchStore } from '../../../models/combinedStore'
 import { Button, Card } from 'antd'
 import { HeartFilled } from '@ant-design/icons'
 import classes from './ContentDetails.module.css'

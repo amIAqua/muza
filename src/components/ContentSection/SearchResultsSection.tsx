@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { useStore } from 'effector-react'
-import { searchStore } from '../../models/search'
+import { searchStore } from '../../models/combinedStore'
 
 // Content sections
 import { Tracks } from '../UI/Tracks/Tracks'

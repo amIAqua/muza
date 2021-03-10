@@ -48,3 +48,18 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
+
+/* more button */
+.more {
+  color: #ccc;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.more:hover {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
