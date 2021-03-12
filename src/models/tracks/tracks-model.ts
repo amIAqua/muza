@@ -4,10 +4,5 @@ import { ISeachResults, ITrack } from '../types/search-results.types'
 import { getTracks } from './tracks-effects'
 
 export const $fetchedTracks = createStore<any>([])
-  .on(getTracks.doneData, (state, tracks: ITrack[]) => {
-    // Add new tracks to existing
-    // if (state.length) return [...state, ...tracks]
-
-    return [...state, ...tracks]
-  })
+  .on(getTracks.doneData, (state, tracks: ITrack[]) => [...state, ...tracks])
   .on(clearSearchResults, (state: ISeachResults | null) => [])

@@ -11,7 +11,6 @@ type ArtistsPropsType = {
 export const getArtists = createEffect(
   async ({ query, offset }: ArtistsPropsType) => {
     const artistsData = await searchArtistsByQuery(query, offset)
-
     // Serialize artists to appropriate format
     const serializedArtists = serializeArtists(artistsData.artists.items)
 

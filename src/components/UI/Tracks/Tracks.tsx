@@ -17,16 +17,17 @@ export const Tracks: FC = () => {
       : null
   }
 
-  const loadMoreTracks = () => (
-    <p
-      className='more'
-      onClick={() =>
-        getTracks({ query: inputQuery, offset: fetchedTracks.length + 1 })
-      }
-    >
-      more
-    </p>
-  )
+  const loadMoreTracks = () =>
+    fetchedTracks.length >= 20 ? (
+      <p
+        className='more'
+        onClick={() =>
+          getTracks({ query: inputQuery, offset: fetchedTracks.length + 1 })
+        }
+      >
+        more
+      </p>
+    ) : null
 
   return (
     <>

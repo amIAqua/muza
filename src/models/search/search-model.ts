@@ -18,10 +18,12 @@ export const $inputQuery = createStore<string>('').on(
       return query
     }
 
+    // Clear search results before fetching new
     clearSearchResults()
 
     getTracks({ query, offset: 0 })
     getArtists({ query, offset: 0 })
+
     return query
   }
 )

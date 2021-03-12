@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useMemo } from 'react'
 import { useStore } from 'effector-react'
 import { searchStore } from '../../../models/combinedStore'
 import { IArtist } from '../../../models/types/search-results.types'
@@ -22,16 +22,17 @@ export const Artists: FC = () => {
       : null
   }
 
-  const loadMoreArtists = () => (
-    <p
-      className='more'
-      onClick={() =>
-        getArtists({ query: inputQuery, offset: fetchedArtists.length + 1 })
-      }
-    >
-      more
-    </p>
-  )
+  const loadMoreArtists = () =>
+    fetchedArtists.length >= 10 ? (
+      <p
+        className='more'
+        onClick={() =>
+          getArtists({ query: inputQuery, offset: fetchedArtists.length + 1 })
+        }
+      >
+        more
+      </p>
+    ) : null
 
   return (
     <>
